@@ -1,45 +1,46 @@
-# Forest_Cover_Classification
+# Forest Cover Classification
 Implemented some popular classification algorithms to predict the type of forest cover. (Extensive improvements were carried out later)
 
 ## Dataset Description
-The dataset contains data from 4 areas of the Roosevelt National Forest in Colorado. It includes information on tree type, shadow coverage, distance to nearby landmarks (roads etc.), soil type, and local topography for 7 different types of forest cover.
+The dataset contains data from `4` areas of the Roosevelt National Forest in Colorado. It includes information on tree type, shadow coverage, distance to nearby landmarks (roads etc.), soil type, and local topography for `7` different types of forest cover.
 * Title: Forest Cover Type Dataset
 * URL: https://www.kaggle.com/datasets/uciml/forest-cover-type-dataset
+
 <table>
-<thead>
-  <tr>
-    <th align="center" colspan="2">Generic Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td align="center">Number of samples</td>
-    <td align="center">5,81,012</td>
-  </tr>
-  <tr>
-    <td align="center">Number of attributes</td>
-    <td align="center">55</td>
-  </tr>
-  <tr>
-    <td align="center">Input features</td>
-    <td align="center">54</td>
-  </tr>
-  <tr>
-    <td align="center">Target variable</td>
-    <td align="center">Cover_Type (1 to 7)</td>
-  </tr>
-</tbody>
+  <thead>
+    <tr>
+      <th align="center" colspan="2">Generic Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">Number of samples</td>
+      <td align="center"><code>5,81,012</code></td>
+    </tr>
+    <tr>
+      <td align="center">Number of attributes</td>
+      <td align="center"><code>55</code></td>
+    </tr>
+    <tr>
+      <td align="center">Input features</td>
+      <td align="center"><code>54</code></td>
+    </tr>
+    <tr>
+      <td align="center">Target variable</td>
+      <td align="center">Cover_Type (<code>1</code> to <code>7</code>)</td>
+    </tr>
+  </tbody>
 </table>
 
-The dataset was split into a training set and a test set, with 75 % being used for training and 25 % being used for testing. Before being used, the data in both subsets was normalized using StandardScaler. Additionally, for the neural network model, the training set was further split into training and validation subsets, with 75 % being used for training and 25 % being used for validation.
+The dataset was split into a training set and a test set, with `75%` being used for training and `25%` being used for testing. Before being used, the data in both subsets was normalized using StandardScaler. Additionally, for the neural network model, the training set was further split into training and validation subsets, with `75%` being used for training and `25%` being used for validation.
 
-For all the models except the K Nearest Neighbour Classifier and the neural network, the optimal hyperparameters were found using halving grid search with 5-fold cross validation.
+For all the models except the K Nearest Neighbour Classifier and the neural network, the optimal hyperparameters were found using halving grid search with `5`-fold cross validation.
 
 Finally, confusion matrices and bar graphs were plotted to visualize the results for each model.
 
 ## K Nearest Neighbours (KNN Classifier)
 For the KNN classifier, the accuracy rates were computed for different values of K for the training as well as test datasets.
-* Best Value of K (= 1)
+* Best Value of K (= `1`)
   <table>
   <thead>
     <tr>
@@ -53,17 +54,17 @@ For the KNN classifier, the accuracy rates were computed for different values of
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">93.446</td>
-      <td align="center">93.469</td>
-      <td align="center">93.466</td>
-      <td align="center">93.467</td>
+      <td align="center"><code>93.446</code></td>
+      <td align="center"><code>93.469</code></td>
+      <td align="center"><code>93.466</code></td>
+      <td align="center"><code>93.467</code></td>
     </tr>
   </tbody>
   </table>
@@ -82,55 +83,55 @@ For the KNN classifier, the accuracy rates were computed for different values of
   </thead>
   <tbody>
     <tr>
-      <td align="center" rowspan="2"><strong>3</strong></td>
+      <td align="center" rowspan="2"><strong><code>3</code></strong></td>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">96.811</td>
-      <td align="center">96.807</td>
-      <td align="center">96.811</td>
-      <td align="center">96.807</td>
+      <td align="center"><code>96.811</code></td>
+      <td align="center"><code>96.807</code></td>
+      <td align="center"><code>96.811</code></td>
+      <td align="center"><code>96.807</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">93.151</td>
-      <td align="center">93.134</td>
-      <td align="center">93.151</td>
-      <td align="center">93.139</td>
+      <td align="center"><code>93.151</code></td>
+      <td align="center"><code>93.134</code></td>
+      <td align="center"><code>93.151</code></td>
+      <td align="center"><code>93.139</code></td>
     </tr>
     <tr>
       <td align="center" colspan="6"></td>
     </tr>
     <tr>
-      <td align="center" rowspan="2"><strong>5</strong></td>
+      <td align="center" rowspan="2"><strong><code>5</code></strong></td>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">95.475</td>
-      <td align="center">95.466</td>
-      <td align="center">95.475</td>
-      <td align="center">95.467</td>
+      <td align="center"><code>95.475</code></td>
+      <td align="center"><code>95.466</code></td>
+      <td align="center"><code>95.475</code></td>
+      <td align="center"><code>95.467</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">92.723</td>
-      <td align="center">92.702</td>
-      <td align="center">92.723</td>
-      <td align="center">92.705</td>
+      <td align="center"><code>92.723</code></td>
+      <td align="center"><code>92.702</code></td>
+      <td align="center"><code>92.723</code></td>
+      <td align="center"><code>92.705</code></td>
     </tr>
     <tr>
       <td align="center" colspan="6"></td>
     </tr>
     <tr>
-      <td align="center" rowspan="2"><strong>10</strong></td>
+      <td align="center" rowspan="2"><strong><code>10</code></strong></td>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">93.418</td>
-      <td align="center">93.398</td>
-      <td align="center">93.418</td>
-      <td align="center">93.387</td>
+      <td align="center"><code>93.418</code></td>
+      <td align="center"><code>93.398</code></td>
+      <td align="center"><code>93.418</code></td>
+      <td align="center"><code>93.387</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">91.605</td>
-      <td align="center">91.569</td>
-      <td align="center">91.605</td>
-      <td align="center">91.566</td>
+      <td align="center"><code>91.605</code></td>
+      <td align="center"><code>91.569</code></td>
+      <td align="center"><code>91.605</code></td>
+      <td align="center"><code>91.566</code></td>
     </tr>
   </tbody>
   </table>
@@ -149,17 +150,17 @@ For the KNN classifier, the accuracy rates were computed for different values of
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">94.303</td>
-      <td align="center">94.302</td>
-      <td align="center">94.303</td>
-      <td align="center">94.302</td>
+      <td align="center"><code>94.303</code></td>
+      <td align="center"><code>94.302</code></td>
+      <td align="center"><code>94.303</code></td>
+      <td align="center"><code>94.302</code></td>
     </tr>
   </tbody>
   </table>
@@ -178,17 +179,17 @@ For the KNN classifier, the accuracy rates were computed for different values of
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">95.691</td>
-      <td align="center">95.701</td>
-      <td align="center">95.691</td>
-      <td align="center">95.672</td>
+      <td align="center"><code>95.691</code></td>
+      <td align="center"><code>95.701</code></td>
+      <td align="center"><code>95.691</code></td>
+      <td align="center"><code>95.672</code></td>
     </tr>
   </tbody>
   </table>
@@ -207,17 +208,17 @@ For the KNN classifier, the accuracy rates were computed for different values of
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">46.011</td>
-      <td align="center">66.014</td>
-      <td align="center">46.011</td>
-      <td align="center">38.916</td>
+      <td align="center"><code>46.011</code></td>
+      <td align="center"><code>66.014</code></td>
+      <td align="center"><code>46.011</code></td>
+      <td align="center"><code>38.916</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">45.765</td>
-      <td align="center">65.648</td>
-      <td align="center">45.765</td>
-      <td align="center">38.583</td>
+      <td align="center"><code>45.765</code></td>
+      <td align="center"><code>65.648</code></td>
+      <td align="center"><code>45.765</code></td>
+      <td align="center"><code>38.583</code></td>
     </tr>
   </tbody>
   </table>
@@ -236,17 +237,17 @@ For the KNN classifier, the accuracy rates were computed for different values of
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">71.269</td>
-      <td align="center">70.407</td>
-      <td align="center">71.269</td>
-      <td align="center">69.673</td>
+      <td align="center"><code>71.269</code></td>
+      <td align="center"><code>70.407</code></td>
+      <td align="center"><code>71.269</code></td>
+      <td align="center"><code>69.673</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">71.276</td>
-      <td align="center">70.299</td>
-      <td align="center">71.276</td>
-      <td align="center">69.688</td>
+      <td align="center"><code>71.276</code></td>
+      <td align="center"><code>70.299</code></td>
+      <td align="center"><code>71.276</code></td>
+      <td align="center"><code>69.688</code></td>
     </tr>
   </tbody>
   </table>
@@ -265,17 +266,17 @@ For the KNN classifier, the accuracy rates were computed for different values of
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">72.448</td>
-      <td align="center">71.295</td>
-      <td align="center">72.448</td>
-      <td align="center">71.484</td>
+      <td align="center"><code>72.448</code></td>
+      <td align="center"><code>71.295</code></td>
+      <td align="center"><code>72.448</code></td>
+      <td align="center"><code>71.484</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">72.507</td>
-      <td align="center">71.152</td>
-      <td align="center">72.507</td>
-      <td align="center">71.552</td>
+      <td align="center"><code>72.507</code></td>
+      <td align="center"><code>71.152</code></td>
+      <td align="center"><code>72.507</code></td>
+      <td align="center"><code>71.552</code></td>
     </tr>
   </tbody>
   </table>
@@ -294,23 +295,23 @@ For the KNN classifier, the accuracy rates were computed for different values of
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">71.412</td>
-      <td align="center">69.955</td>
-      <td align="center">71.412</td>
-      <td align="center">69.913</td>
+      <td align="center"><code>71.412</code></td>
+      <td align="center"><code>69.955</code></td>
+      <td align="center"><code>71.412</code></td>
+      <td align="center"><code>69.913</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">71.364</td>
-      <td align="center">70.015</td>
-      <td align="center">71.364</td>
-      <td align="center">69.879</td>
+      <td align="center"><code>71.364</code></td>
+      <td align="center"><code>70.015</code></td>
+      <td align="center"><code>71.364</code></td>
+      <td align="center"><code>69.879</code></td>
     </tr>
   </tbody>
   </table>
 
 ## Neural Network
-A neural network with 5 hidden layers was implemented using different activation functions. Before using the class labels as the target variable, they were zero-indexed -> 1 to 7 were converted to 0 to 6.
+A neural network with `5` hidden layers was implemented using different activation functions. Before using the class labels as the target variable, they were zero-indexed -> `1` to `7` were converted to `0` to `6`.
   <table>
   <thead>
     <tr>
@@ -326,17 +327,17 @@ A neural network with 5 hidden layers was implemented using different activation
     <tr>
       <td align="center" rowspan="2"><strong>ReLU</strong></td>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">95.010</td>
-      <td align="center">92.683</td>
-      <td align="center">91.618</td>
-      <td align="center">92.078</td>
+      <td align="center"><code>95.010</code></td>
+      <td align="center"><code>92.683</code></td>
+      <td align="center"><code>91.618</code></td>
+      <td align="center"><code>92.078</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">93.997</td>
-      <td align="center">90.922</td>
-      <td align="center">89.501</td>
-      <td align="center">90.138</td>
+      <td align="center"><code>93.997</code></td>
+      <td align="center"><code>90.922</code></td>
+      <td align="center"><code>89.501</code></td>
+      <td align="center"><code>90.138</code></td>
     </tr>
     <tr>
       <td align="center" colspan="6"></td>
@@ -344,17 +345,17 @@ A neural network with 5 hidden layers was implemented using different activation
     <tr>
       <td align="center" rowspan="2"><strong>Tanh</strong></td>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">96.864</td>
-      <td align="center">95.259</td>
-      <td align="center">93.779</td>
-      <td align="center">91.204</td>
+      <td align="center"><code>96.864</code></td>
+      <td align="center"><code>95.259</code></td>
+      <td align="center"><code>93.779</code></td>
+      <td align="center"><code>91.204</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">95.014</td>
-      <td align="center">91.932</td>
-      <td align="center">90.576</td>
-      <td align="center">91.204</td>
+      <td align="center"><code>95.014</code></td>
+      <td align="center"><code>91.932</code></td>
+      <td align="center"><code>90.576</code></td>
+      <td align="center"><code>91.204</code></td>
     </tr>
     <tr>
       <td align="center" colspan="6"></td>
@@ -362,17 +363,17 @@ A neural network with 5 hidden layers was implemented using different activation
     <tr>
       <td align="center" rowspan="2"><strong>Sigmoid</strong></td>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">94.290</td>
-      <td align="center">92.100</td>
-      <td align="center">90.649</td>
-      <td align="center">91.356</td>
+      <td align="center"><code>94.290</code></td>
+      <td align="center"><code>92.100</code></td>
+      <td align="center"><code>90.649</code></td>
+      <td align="center"><code>91.356</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">93.471</td>
-      <td align="center">90.658</td>
-      <td align="center">89.175</td>
-      <td align="center">89.896</td>
+      <td align="center"><code>93.471</code></td>
+      <td align="center"><code>90.658</code></td>
+      <td align="center"><code>89.175</code></td>
+      <td align="center"><code>89.896</code></td>
     </tr>
   </tbody>
   </table>
@@ -391,17 +392,17 @@ A neural network with 5 hidden layers was implemented using different activation
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
-      <td align="center">100.000</td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
+      <td align="center"><code>100.000</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">94.308</td>
-      <td align="center">94.305</td>
-      <td align="center">94.308</td>
-      <td align="center">94.306</td>
+      <td align="center"><code>94.308</code></td>
+      <td align="center"><code>94.305</code></td>
+      <td align="center"><code>94.308</code></td>
+      <td align="center"><code>94.306</code></td>
     </tr>
   </tbody>
   </table>
@@ -420,17 +421,17 @@ A neural network with 5 hidden layers was implemented using different activation
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">95.398</td>
-      <td align="center">95.403</td>
-      <td align="center">95.398</td>
-      <td align="center">95.391</td>
+      <td align="center"><code>95.398</code></td>
+      <td align="center"><code>95.403</code></td>
+      <td align="center"><code>95.398</code></td>
+      <td align="center"><code>95.391</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">93.390</td>
-      <td align="center">93.392</td>
-      <td align="center">93.390</td>
-      <td align="center">93.378</td>
+      <td align="center"><code>93.390</code></td>
+      <td align="center"><code>93.392</code></td>
+      <td align="center"><code>93.390</code></td>
+      <td align="center"><code>93.378</code></td>
     </tr>
   </tbody>
   </table>
@@ -449,17 +450,17 @@ A neural network with 5 hidden layers was implemented using different activation
   <tbody>
     <tr>
       <td align="center"><strong>Training Subset</strong></td>
-      <td align="center">99.995</td>
-      <td align="center">99.995</td>
-      <td align="center">99.995</td>
-      <td align="center">99.995</td>
+      <td align="center"><code>99.995</code></td>
+      <td align="center"><code>99.995</code></td>
+      <td align="center"><code>99.995</code></td>
+      <td align="center"><code>99.995</code></td>
     </tr>
     <tr>
       <td align="center"><strong>Test Subset</strong></td>
-      <td align="center">96.938</td>
-      <td align="center">96.933</td>
-      <td align="center">96.938</td>
-      <td align="center">96.932</td>
+      <td align="center"><code>96.938</code></td>
+      <td align="center"><code>96.933</code></td>
+      <td align="center"><code>96.938</code></td>
+      <td align="center"><code>96.932</code></td>
     </tr>
   </tbody>
   </table>
